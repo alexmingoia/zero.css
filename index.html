@@ -8,49 +8,89 @@
 		<link rel="stylesheet" type="text/css" href="/zero.css" />
 	</head>
 	<body>
-		<main max-width="md" padding-y="xl" padding-x="sm">
-      <h1 text-align="center">ZeroCSS</h1>
-			<div align="horizontal" horizontal="center">
-        <ul>
-          <li>Beautiful, functional styling without classes.</li>
-          <li>Attributes for spacing and alignment.</li>
-					<li>Less than 10kb and 100% free.</li>
-        </ul>
-			</div>
-			<hr/>
-			<h3>Usage</h3>
-			<p>Include links to the reset and zero.css:</p>
-			<pre><code>&lt;link href="https://cdn.jsdelivr.net/gh/sindresorhus/modern-normalize@main/modern-normalize.css" type="text/css" rel="stylesheet" /&gt;
+    <h1 text-align="center">ZeroCSS</h1>
+		<div align="horizontal" horizontal="center">
+      <ul>
+        <li>Simple, functional styling without classes.</li>
+        <li>Attributes for spacing and alignment.</li>
+				<li>Less than 10kb and 100% free.</li>
+      </ul>
+		</div>
+		<hr/>
+		<h3>Usage</h3>
+		<p>Include links to the reset and zero.css:</p>
+		<pre><code>&lt;link href="https://cdn.jsdelivr.net/gh/sindresorhus/modern-normalize@main/modern-normalize.css" type="text/css" rel="stylesheet" /&gt;
 &lt;link href="https://cdn.jsdelivr.net/gh/alexmingoia/zero.css@main/zero.css" type="text/css" rel="stylesheet" /&gt;</code></pre>
-			<hr/>
-			<div text-size="md">
-				<h3>Elements</h3>
-				<h5>Sticky <code>&lt;footer&gt;</code></h5>
-				<p>If a <code>footer</code> is a direct descendent of <code>body</code>, and there is also an adjacent <code>main</code> and/or <code>header</code> element, the footer will stick to the bottom of the page.</p>
-				<h3>Attributes</h3>
-				<h4>Alignment</h4>
-				<ul>
-					<li><code>align="horizontal|vertical"</code> Aligns content along horizontal or vertical axis.</li>
-					<li><code>horizontal="left|center|right"</code> Controls horizontal alignment.</li>
-					<li><code>vertical="top|center|bottom"</code> Controls vertical alignment.</li>
-				</ul>
-				<h4>Text</h4>
-				<ul>
-					<li><code>text-align="left|center|right"</code></li>
-					<li><code>text-size="xs|sm|md|lg|xl|2xl|3xl|4xl"</code></li>
-				</ul>
-				<h4>Spacing</h4>
-				<ul>
-					<li><code>max-width="sm|md|lg|xl"</code></li>
-					<li><code>padding="xs|sm|md|lg|xl"</code></li>
-					<li><code>padding-x="xs|sm|md|lg|xl"</code></li>
-					<li><code>padding-y="xs|sm|md|lg|xl"</code></li>
-					<li><code>padding-top="xs|sm|md|lg|xl"</code></li>
-					<li><code>padding-left="xs|sm|md|lg|xl"</code></li>
-					<li><code>padding-right="xs|sm|md|lg|xl"</code></li>
-					<li><code>padding-bottom="xs|sm|md|lg|xl"</code></li>
-				</ul>
+		<hr/>
+		<h3>Attributes</h3>
+		<h4>Layout</h4>
+		<ul>
+			<li><code>container</code> sets <code>max-width="md"</code> and <code>margin-x="auto"</code></li>		
+		</ul>
+		<h4>Alignment</h4>
+		<ul>
+			<li><code>align="horizontal|vertical"</code> aligns content along horizontal or vertical axis.</li>
+			<li><code>horizontal="left|center|right"</code> controls horizontal alignment.</li>
+			<li><code>vertical="top|center|bottom"</code> controls vertical alignment.</li>
+		</ul>
+		<h4>Text</h4>
+		<ul>
+			<li><code>text-align="left|center|right"</code></li>
+			<li><code>text-size="xs|sm|md|lg|xl|2xl|3xl|4xl"</code></li>
+			<li><code>text-color="muted|base|emphasis"</code></li>
+		</ul>
+		<h4>Spacing</h4>
+		<ul>
+			<li><code>max-width="none|2xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>padding="xs|sm|md|lg|xl"</code></li>
+			<li><code>padding-x="xs|sm|md|lg|xl"</code></li>
+			<li><code>padding-y="xs|sm|md|lg|xl"</code></li>
+			<li><code>padding-top="xs|sm|md|lg|xl"</code></li>
+			<li><code>padding-left="xs|sm|md|lg|xl"</code></li>
+			<li><code>padding-right="xs|sm|md|lg|xl"</code></li>
+			<li><code>padding-bottom="xs|sm|md|lg|xl"</code></li>
+			<li><code>margin="xs|sm|md|lg|xl"</code></li>
+			<li><code>margin-x="auto|xs|sm|md|lg|xl"</code></li>
+			<li><code>margin-y="xs|sm|md|lg|xl"</code></li>
+			<li><code>margin-top="xs|sm|md|lg|xl"</code></li>
+			<li><code>margin-left="xs|sm|md|lg|xl"</code></li>
+			<li><code>margin-right="xs|sm|md|lg|xl"</code></li>
+			<li><code>margin-bottom="xs|sm|md|lg|xl"</code></li>
+		</ul>
+		<hr/>
+		<h3>Examples</h3>
+		<h1>Header 1</h1>
+		<h2>Header 2</h2>
+		<h3>Header 3</h3>
+		<h4>Header 4</h4>
+		<h5>Header 5</h5>
+		<h6>Header 6</h6>
+		<p>This is a paragraph.</p>
+		<p><a href="#">This is a link</a>.</p>
+		<p><small>This is a <code>&lt;small&gt;</code> tag.</small></p>
+		<p>This is a <sup>sup</sup> tag.</p>
+		<p>This is an <code>&lt;a&gt;</code> with <code>type="button"</code>: <a href="#" type="button">Click me</a></p>
+		<blockquote><p>This is a <code>&lt;blockquote&gt;</code>.</p></blockquote>
+		<blockquote><p>This is a blockquote with footer attribution.</p><footer>– Mr. Zero</footer></blockquote>
+		<figure>
+			<div style="border: 3px dashed var(--color-foreground-accent); border-radius: var(--border-radius); width: 100%; height: 10rem;"></div>
+			<figcaption>This is a figure containing img and figcaption.</figcaption>
+		</figure>
+		<form method="GET" action="/" max-width="2xs">
+			<h6>Example form</h6>
+			<div margin-bottom="md">
+				<label for="email">Email</label>
+				<input type="email" name="email" required />
 			</div>
-    </main>
+			<div margin-bottom="md">
+				<label for="color">Favorite color</label>
+				<select>
+					<option value="red">Red</option>
+					<option value="blue">Blue</option>
+					<option value="yellow">Yellow</option>
+				</select>
+			</div>
+			<button type="submit">Submit</button>
+		</form>
   </body>
 </html>
