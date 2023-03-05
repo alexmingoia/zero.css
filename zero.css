@@ -1,0 +1,151 @@
+:root {
+  --color-background: white;
+  --color-foreground: #f9fafb;
+  --color-foreground-accent: #d1d5db;
+  --color-text-light: #6b7280;
+  --color-text-base: #1f2937;
+  --color-text-dark: #111827;
+  --text-size-xs: 11px;
+  --text-size-sm: 13px;
+  --text-size-base: 16px;
+  --text-size-lg: 19px;
+  --text-size-xl: 23px;
+  --text-size-2xl: 27px;
+  --text-size-3xl: 31px;
+  --text-size-4xl: 35px;
+  --spacing-article: 1em;
+  --width-container: 640px;
+  --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family: var(--font-family-sans);
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  font-family: var(--font-family);
+}
+
+body {
+  color: var(--color-text-base);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+container {
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  max-width: var(--breakpoint-md);
+}
+
+[padded="xs"] { padding: 0.25rem; }
+[padded="sm"] { padding: 1rem; }
+[padded="md"] { padding: 2rem; }
+[padded="lg"] { padding: 3rem; }
+[padded="xl"] { padding: 4rem; }
+[padded-x="xs"] { padding: 0 0.25rem; }
+[padded-x="sm"] { padding: 0 1rem; }
+[padded-x="md"] { padding: 0 2rem; }
+[padded-x="lg"] { padding: 0 3rem; }
+[padded-x="xl"] { padding: 0 4rem; }
+[padded-y="xs"] { padding: 0.25rem 0; }
+[padded-y="sm"] { padding: 1rem 0; }
+[padded-y="md"] { padding: 2rem 0; }
+[padded-y="lg"] { padding: 3rem 0; }
+[padded-y="xl"] { padding: 4rem 0; }
+[padded-top="xs"] { padding-top: 0.25rem; }
+[padded-top="sm"] { padding-top: 1rem; }
+[padded-top="md"] { padding-top: 2rem; }
+[padded-top="lg"] { padding-top: 3rem; }
+[padded-top="xl"] { padding-top: 4rem; }
+
+[text-align="left"] { text-align: left; }
+[text-align="center"] { text-align: center; }
+[text-align="right"] { text-align: right; }
+
+[width="sm"] { max-width: var(--breakpoint-sm); }
+[width="md"] { max-width: var(--breakpoint-md) }
+[width="lg"] { max-width: var(--breakpoint-lg); }
+[width="xl"] { max-width: var(--breakpoint-xl); }
+
+[halign="center"] { justify-content: center; }
+[valign="top"] { align-items: start; }
+[valign="center"] { align-items: center; }
+
+h1 {
+  font-size: var(--text-size-4xl);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--text-size-3xl);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: var(--text-size-2xl);
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: var(--text-size-xl);
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: var(--text-size-lg);
+  line-height: 1.4;
+}
+
+h6 {
+  font-size: var(--text-size-base);
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-dark);
+}
+
+p {
+  font-size: var(--text-size-base);
+  line-height: 1.5;
+}
+
+article h1 {
+  margin: 0 0 var(--spacing-article) 0;
+}
+
+article h2, article h3, article h4, article h5, article h6 {
+  margin: var(--spacing-article) 0;
+}
+
+article p {
+  font-size: var(--text-size-lg);
+  margin: var(--spacing-article) 0;
+}
+
+article ul, article ol {
+  line-height: 1.5;
+}
+
+article li {
+  margin: .2em 0;  
+}
+
+article ol li::marker {
+  color: var(--color-text-light);
+}
+
+article ul li::marker {
+  color: var(--color-foreground-accent);
+}
