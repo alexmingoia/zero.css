@@ -247,6 +247,27 @@ h6 {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--text-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--text-size-2xl);
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: var(--text-size-xl);
+    line-height: 1.3;
+  }
+
+  h4, h5, h6 {
+    font-size: var(--text-size-lg);
+    line-height: 1.4;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-emphasis);
 }

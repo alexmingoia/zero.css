@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="/zero.css" />
 	</head>
 	<body>
-    <h1 text-align="center">ZeroCSS</h1>
+    <h1 text-align="center"><em>ZeroCSS</em></h1>
 		<div align="horizontal" horizontal="center">
       <ul>
         <li>Simple, functional styling without classes.</li>
@@ -92,5 +92,43 @@
 			</div>
 			<button type="submit">Submit</button>
 		</form>
+		<hr/>
+		<h3>Variables</h3>
+		<pre><code>:root {
+  --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family: var(--font-family-sans);
+  --color-background: white;
+  --color-foreground-muted: #f9fafb;
+  --color-foreground: #f3f4f6;
+  --color-foreground-accent: #d1d5db;
+  --color-text-muted: #6b7280;
+  --color-text-base: #1f2937;
+  --color-text-emphasis: #111827;
+  --text-size-xs: 11px;
+  --text-size-sm: 13px;
+  --text-size-md: 16px;
+  --text-size-lg: 19px;
+  --text-size-xl: 23px;
+  --text-size-2xl: 27px;
+  --text-size-3xl: 31px;
+  --text-size-4xl: 35px;
+  --text-decoration: underline;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 6rem;
+  --breakpoint-2xs: 264px;
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --border-radius: 5px;
+}</code></pre>
   </body>
 </html>
