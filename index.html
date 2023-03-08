@@ -9,7 +9,7 @@
 	</head>
 	<body>
     <h1 text-align="center"><em>ZeroCSS</em></h1>
-		<div align="horizontal" horizontal="center">
+		<div distribute-horizontal="center" align-items="top">
       <ul>
         <li>Simple, functional styling without classes.</li>
         <li>Attributes for spacing and alignment.</li>
@@ -22,6 +22,11 @@
 		<pre><code>&lt;link href="https://cdn.jsdelivr.net/gh/sindresorhus/modern-normalize@v1.1.0/modern-normalize.css" type="text/css" rel="stylesheet" /&gt;
 &lt;link href="https://cdn.jsdelivr.net/gh/alexmingoia/zero.css@2023-03-07/zero.css" type="text/css" rel="stylesheet" /&gt;</code></pre>
 		<hr/>
+		<h3>Elements</h3>
+		<p>Some elements have default styles applied:</p>
+		<ul>
+			<li><code>&lt;body max-width="md" margin-horizontal="auto" padding-horizontal="md" padding-vertical="2xl"&gt;</code></li>
+		</ul>
 		<h3>Attributes</h3>
 		<h4>Layout</h4>
 		<ul>
@@ -29,9 +34,16 @@
 		</ul>
 		<h4>Alignment</h4>
 		<ul>
-			<li><code>align="horizontal|vertical"</code> aligns content along horizontal or vertical axis.</li>
-			<li><code>horizontal="left|center|right"</code> controls horizontal alignment.</li>
-			<li><code>vertical="top|center|bottom"</code> controls vertical alignment.</li>
+			<li><code>distribute-horizontal="left|center|across|right"</code>
+				<ul>
+					<li><code>align-items="top|center|bottom"</code></li>
+				</ul>
+			</li>
+			<li><code>distribute-vertical="top|center|across|bottom"</code>
+				<ul>
+					<li><code>align-items="left|center|right"</code></li>
+				</ul>
+			</li>
 		</ul>
 		<h4>Text</h4>
 		<ul>
@@ -42,20 +54,20 @@
 		<h4>Spacing</h4>
 		<ul>
 			<li><code>max-width="none|2xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>padding="xs|sm|md|lg|xl"</code></li>
-			<li><code>padding-x="xs|sm|md|lg|xl"</code></li>
-			<li><code>padding-y="xs|sm|md|lg|xl"</code></li>
-			<li><code>padding-top="xs|sm|md|lg|xl"</code></li>
-			<li><code>padding-left="xs|sm|md|lg|xl"</code></li>
-			<li><code>padding-right="xs|sm|md|lg|xl"</code></li>
-			<li><code>padding-bottom="xs|sm|md|lg|xl"</code></li>
-			<li><code>margin="xs|sm|md|lg|xl"</code></li>
-			<li><code>margin-x="auto|xs|sm|md|lg|xl"</code></li>
-			<li><code>margin-y="xs|sm|md|lg|xl"</code></li>
-			<li><code>margin-top="xs|sm|md|lg|xl"</code></li>
-			<li><code>margin-left="xs|sm|md|lg|xl"</code></li>
-			<li><code>margin-right="xs|sm|md|lg|xl"</code></li>
-			<li><code>margin-bottom="xs|sm|md|lg|xl"</code></li>
+			<li><code>padding="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>padding-horizontal="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>padding-vertical="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>padding-top="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>padding-left="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>padding-right="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>padding-bottom="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>margin="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>margin-horizontal="auto|xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>margin-vertical="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>margin-top="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>margin-left="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>margin-right="xs|sm|md|lg|xl|2xl"</code></li>
+			<li><code>margin-bottom="xs|sm|md|lg|xl|2xl"</code></li>
 		</ul>
 		<hr/>
 		<h3>Examples</h3>
