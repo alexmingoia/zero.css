@@ -7,9 +7,9 @@
 		<link rel="stylesheet" type="text/css" href="/modern-normalize/modern-normalize.css" />
 		<link rel="stylesheet" type="text/css" href="/zero.css" />
 	</head>
-	<body>
+	<body container padding-vertical="xl" padding-horizontal="lg">
     <h1 text-align="center"><em>ZeroCSS</em></h1>
-		<div distribute-horizontal="center" align-items="top">
+		<div distribute="center" align="start">
       <ul>
         <li>Simple, functional styling without classes.</li>
         <li>Attributes for spacing and alignment.</li>
@@ -22,11 +22,6 @@
 		<pre><code>&lt;link href="https://cdn.jsdelivr.net/gh/sindresorhus/modern-normalize@v1.1.0/modern-normalize.css" type="text/css" rel="stylesheet" /&gt;
 &lt;link href="https://cdn.jsdelivr.net/gh/alexmingoia/zero.css@2023-03-07/zero.css" type="text/css" rel="stylesheet" /&gt;</code></pre>
 		<hr/>
-		<h3>Elements</h3>
-		<p>Some elements have default styles applied:</p>
-		<ul>
-			<li><code>&lt;body max-width="md" margin-horizontal="auto" padding-horizontal="md" padding-vertical="2xl"&gt;</code></li>
-		</ul>
 		<h3>Attributes</h3>
 		<h4>Layout</h4>
 		<ul>
@@ -34,16 +29,9 @@
 		</ul>
 		<h4>Alignment</h4>
 		<ul>
-			<li><code>distribute-horizontal="left|center|across|right"</code>
-				<ul>
-					<li><code>align-items="top|center|bottom"</code></li>
-				</ul>
-			</li>
-			<li><code>distribute-vertical="top|center|across|bottom"</code>
-				<ul>
-					<li><code>align-items="left|center|right"</code></li>
-				</ul>
-			</li>
+			<li><code>distribute="start|center|across|end"</code></li>
+			<li><code>align="start|center|end"</code></li>
+			<li><code>direction="horizontal|vertical"</code>
 		</ul>
 		<h4>Text</h4>
 		<ul>
