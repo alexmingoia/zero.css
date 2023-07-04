@@ -223,7 +223,7 @@ a, [type="link"] {
   color: var(--color-text-emphasis);
 }
 
-p a, ul a, ol a {
+p > a, ul > a, ol > a {
   font-weight: 500;
 }
 
