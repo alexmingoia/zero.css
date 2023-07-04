@@ -170,6 +170,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: var(--space-lg) 0 var(--space-md) 0;
 }
 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    text-decoration: underline;
+  }
+}
+
 p {
   margin: var(--space-md) 0;
   line-height: 1.5;
