@@ -17,7 +17,6 @@
   --text-size-xl: 23px;
   --text-size-2xl: 27px;
   --text-size-3xl: 31px;
-  --text-size-4xl: 35px;
   --text-decoration: underline;
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -60,6 +59,7 @@
 [align="end"] { align-items: end; }
 [distribute][direction="horizontal"] { flex-direction: row; }
 [distribute][direction="vertical"] { flex-direction: column; }
+[distribute] > [expand] { flex-grow: 1; }
 
 [container] {
   margin: 0 auto;
@@ -95,94 +95,65 @@ body {
   font-size: var(--text-size-md);
 }
 
-body[sticky-footer] {
-  display: flex;
-  flex-direction: column;
-}
-
-body[sticky-footer] > main {
-  flex: 1;
-}
-
 h1 {
-  font-size: var(--text-size-4xl);
+  font-size: var(--text-size-3xl);
   font-weight: 800;
   margin: 0 0 var(--space-md) 0;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 h2 {
   font-weight: 700;
-  font-size: var(--text-size-3xl);
-  line-height: 1.2;
+  font-size: var(--text-size-2xl);
+  line-height: 1.4;
 }
 
 h3 {
   font-weight: 600;
-  font-size: var(--text-size-2xl);
-  line-height: 1.2;
+  font-size: var(--text-size-xl);
+  line-height: 1.5;
 }
 
 h4 {
   font-weight: 600;
-  font-size: var(--text-size-xl);
-  line-height: 1.3;
-}
-
-h5 {
-  font-weight: 600;
   font-size: var(--text-size-lg);
-  line-height: 1.4;
-}
-
-h6 {
-  font-weight: 600;
-  font-size: var(--text-size-md);
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: var(--text-size-3xl);
-  }
-  
-  h2 {
-    font-size: var(--text-size-2xl);
-    line-height: 1.2;
-  }
-
-  h3 {
-    font-size: var(--text-size-xl);
-    line-height: 1.3;
-  }
-
-  h4, h5, h6 {
-    font-size: var(--text-size-lg);
-    line-height: 1.4;
-  }
+h5, h6 {
+  font-weight: 600;
+  font-size: var(--text-size-md);
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-emphasis);
-}
-
-h1, h2, h3, h4, h5, h6 {
   margin: var(--space-lg) 0 var(--space-md) 0;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  text-decoration: none;
+hgroup {
+  margin: var(--space-lg) 0 var(--space-md) 0;
 }
 
-@media (hover: hover) {
-  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    text-decoration: underline;
-  }
+hgroup > * {
+  margin: 0;
+}
+
+hgroup p {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: var(--text-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+hgroup > h1 + p {
+  margin-top: var(--space-xs);
 }
 
 p {
   margin: var(--space-md) 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 a {
@@ -468,6 +439,9 @@ button:active, [type="button"]:active {
 [padding-right="xl"] { padding-right: var(--space-xl); }
 [padding-right="2xl"] { padding-right: var(--space-2xl); }
 
+[text-type="monospace"] { font-family: var(--font-family-mono); }
+[text-type="sans-serif"] { font-family: var(--font-family-sans); }
+[text-type="serif"] { font-family: var(--font-family-serif); }
 [text-align="left"] { text-align: left; }
 [text-align="center"] { text-align: center; }
 [text-align="right"] { text-align: right; }
@@ -475,10 +449,29 @@ button:active, [type="button"]:active {
 [text-size="sm"] { font-size: var(--text-size-sm); }
 [text-size="md"] { font-size: var(--text-size-md); }
 [text-size="lg"] { font-size: var(--text-size-lg); }
-[text-size="xl"] { font-size: var(--text-size-xl); }
-[text-size="2xl"] { font-size: var(--text-size-2xl); }
+[text-size="xl"] {
+  font-size: var(--text-size-xl);
+  line-height: 1.5;
+}
+[text-size="2xl"] {
+  font-size: var(--text-size-2xl);
+  line-height: 1.4
+}
+[text-size="3xl"] {
+  font-size: var(--text-size-3xl);
+  line-height: 1.3;
+}
 [text-color="muted"] { color: var(--color-text-muted); }
 [text-color="base"] { color: var(--color-text-base); }
 [text-color="emphasis"] { color: var(--color-text-emphasis); }
+[text-weight="100"] { font-weight: 100; }
+[text-weight="200"] { font-weight: 200; }
+[text-weight="300"] { font-weight: 300; }
+[text-weight="400"] { font-weight: 400; }
+[text-weight="500"] { font-weight: 500; }
+[text-weight="600"] { font-weight: 600; }
+[text-weight="700"] { font-weight: 700; }
+[text-weight="800"] { font-weight: 800; }
+[text-weight="900"] { font-weight: 900; }
 
 [rounded] { border-radius: 50%; }

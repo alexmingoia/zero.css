@@ -20,24 +20,27 @@
 		<h3>Usage</h3>
 		<p>Include links to the reset and zero.css:</p>
 		<pre><code>&lt;link href="https://cdn.jsdelivr.net/gh/sindresorhus/modern-normalize@v1.1.0/modern-normalize.css" type="text/css" rel="stylesheet" /&gt;
-&lt;link href="https://cdn.jsdelivr.net/gh/alexmingoia/zero.css@2023-03-07/zero.css" type="text/css" rel="stylesheet" /&gt;</code></pre>
+&lt;link href="https://cdn.jsdelivr.net/gh/alexmingoia/zero.css@2023-07-09/zero.min.css" type="text/css" rel="stylesheet" /&gt;</code></pre>
 		<hr/>
 		<h3>Attributes</h3>
 		<h4>Layout</h4>
 		<ul>
-			<li><code>container</code> sets <code>max-width="md"</code> and <code>margin-x="auto"</code></li>		
+			<li><code>container</code> sets <code>max-width="sm"</code> and <code>margin-x="auto"</code></li>		
 		</ul>
 		<h4>Alignment</h4>
 		<ul>
 			<li><code>distribute="start|center|across|end"</code></li>
 			<li><code>align="start|center|end"</code></li>
 			<li><code>direction="horizontal|vertical"</code>
+			<li><code>expand</code> fills available space</li>
 		</ul>
 		<h4>Text</h4>
 		<ul>
+			<li><code>text-type="serif|sans-serif|monospace"</code></li>
 			<li><code>text-align="left|center|right"</code></li>
 			<li><code>text-size="xs|sm|md|lg|xl|2xl|3xl|4xl"</code></li>
 			<li><code>text-color="muted|base|emphasis"</code></li>
+			<li><code>text-weight="100|200|300|400|500|600|700|800|900"</code></li>
 		</ul>
 		<h4>Spacing</h4>
 		<ul>
@@ -59,12 +62,15 @@
 		</ul>
 		<hr/>
 		<h3>Examples</h3>
-		<h1>Header 1</h1>
-		<h2>Header 2</h2>
-		<h3>Header 3</h3>
-		<h4>Header 4</h4>
-		<h5>Header 5</h5>
-		<h6>Header 6</h6>
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+		<h4>Heading 4</h4>
+		<h5>Heading 5</h5>
+		<hgroup>
+			<p>Jul 4th 2023</p>
+			<h1>Heading group</h1>
+		</hgroup>
 		<p>This is a paragraph.</p>
 		<p><a href="#">This is a link</a>.</p>
 		<p><small>This is a <code>&lt;small&gt;</code> tag.</small></p>
@@ -113,7 +119,6 @@
   --text-size-xl: 23px;
   --text-size-2xl: 27px;
   --text-size-3xl: 31px;
-  --text-size-4xl: 35px;
   --text-decoration: underline;
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
