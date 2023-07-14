@@ -232,8 +232,7 @@ ul li::marker {
 }
 
 blockquote, aside {
-  border-left: 0.25rem solid var(--color-foreground-accent);
-  background-color: var(--color-foreground);
+  border-left: 0.25rem solid var(--color-foreground);
   margin: var(--space-md) 0;
   padding: 1rem;
 }
