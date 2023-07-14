@@ -411,11 +411,12 @@ select:not([multiple]) {
 
 button, [type="button"] {
   appearance: none;
+  align-items: center;
   background-color: var(--color-foreground);
   border-radius: var(--border-radius);
   border: 1px solid var(--color-foreground-accent);
   box-shadow: inset 0px 1px 0px 1px var(--color-foreground-muted);
-  display: inline-block;
+  display: inline-flex;
   font-weight: 500;
   color: var(--color-text-base);
   cursor: pointer;
@@ -434,6 +435,29 @@ button:active, [type="button"]:active {
   box-shadow: none;
 }
 
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+button[aria-busy]::before, [type="button"][aria-busy]::before {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 3px var(--color-foreground-accent);
+  border-bottom-color: var(--color-text-base);
+  border-radius: 50%;
+  display: block;
+  content: "";
+  height: .9em;
+  width: .9em;
+  margin-right: var(--space-sm);
+}
+
+[margin="none"] { margin: none; } 
 [margin="xs"] { margin: var(--space-xs); }
 [margin="sm"] { margin: var(--space-sm); }
 [margin="md"] { margin: var(--space-md); }
