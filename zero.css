@@ -458,7 +458,7 @@ button[aria-busy]::before, [type="button"][aria-busy]::before {
   margin-right: var(--space-sm);
 }
 
-[margin="none"] { margin: none; } 
+[margin="none"] { margin: 0; } 
 [margin="xs"] { margin: var(--space-xs); }
 [margin="sm"] { margin: var(--space-sm); }
 [margin="md"] { margin: var(--space-md); }
