@@ -9,127 +9,87 @@
 	<body container padding-vertical="xl" padding-horizontal="lg">
 		<hgroup text-align="center">
 	    <h1><em>ZeroCSS</em></h1>
-			<p>Simple, functional styling without classes.</p>
+			<p>Classy style without classes.</p>
 		</hgroup>
-		<hr/>
-		<h3>Usage</h3>
-		<p>Include link to zero.css</p>
 		<pre><code>&lt;link href="https://cdn.jsdelivr.net/gh/alexmingoia/zero.css@2023-07-09/zero.min.css" type="text/css" rel="stylesheet" /&gt;</code></pre>
-		<hr/>
-		<h3>Examples</h3>
-		<h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
-		<h5>Heading 5</h5>
-		<hgroup>
-			<p>Jul 4th 2023</p>
-			<h1>Heading group</h1>
-		</hgroup>
-		<p>This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p><a href="#">This is a link</a>.</p>
-		<p><small>This is a <code>&lt;small&gt;</code> tag.</small></p>
-		<p>This is a <sup>sup</sup> tag.</p>
-		<p>This is an <code>&lt;a&gt;</code> with <code>type="button"</code>: <a href="#" type="button">Click me</a></p>
-		<blockquote><p>This is a <code>&lt;blockquote&gt;</code>.</p></blockquote>
-		<blockquote><p>This is a blockquote with footer attribution.</p><footer>– Mr. Zero</footer></blockquote>
-		<figure>
-			<div style="border: 3px dashed var(--color-foreground-accent); border-radius: var(--border-radius); width: 100%; height: 10rem;"></div>
-			<figcaption>This is a figure containing img and figcaption.</figcaption>
-		</figure>
-		<form method="GET" action="/" max-width="2xs">
-			<h6>Example form</h6>
-			<div margin-bottom="md">
-				<label for="email">Email</label>
-				<input type="email" name="email" required />
-			</div>
-			<div margin-bottom="md">
-				<label for="color">Favorite color</label>
-				<select>
-					<option value="red">Red</option>
-					<option value="blue">Blue</option>
-					<option value="yellow">Yellow</option>
-				</select>
-			</div>
-			<button type="submit">Submit</button>
-			<p>with [aria-busy] attribute:</p>
-			<button type="submit" aria-busy>Submit</button>
-		</form>
-		<hr/>
-		<h3>Attributes</h3>
-		<h4>Layout</h4>
-		<ul>
-			<li><code>container</code> sets <code>max-width="sm"</code> and <code>margin-x="auto"</code></li>		
-		</ul>
-		<h4>Alignment</h4>
-		<ul>
-			<li><code>distribute="start|center|across|end"</code></li>
-			<li><code>align="start|center|end"</code></li>
-			<li><code>direction="horizontal|vertical"</code>
-			<li><code>expand</code> fills available space</li>
-		</ul>
-		<h4>Text</h4>
-		<ul>
-			<li><code>text-type="serif|sans-serif|monospace"</code></li>
-			<li><code>text-align="left|center|right"</code></li>
-			<li><code>text-size="xs|sm|md|lg|xl|2xl|3xl|4xl"</code></li>
-			<li><code>text-color="muted|base|emphasis"</code></li>
-			<li><code>text-weight="100|200|300|400|500|600|700|800|900"</code></li>
-		</ul>
-		<h4>Spacing</h4>
-		<ul>
-			<li><code>max-width="none|2xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>padding="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>padding-horizontal="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>padding-vertical="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>padding-top="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>padding-left="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>padding-right="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>padding-bottom="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>margin="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>margin-horizontal="auto|xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>margin-vertical="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>margin-top="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>margin-left="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>margin-right="xs|sm|md|lg|xl|2xl"</code></li>
-			<li><code>margin-bottom="xs|sm|md|lg|xl|2xl"</code></li>
-		</ul>
-		<hr/>
-		<h3>Variables</h3>
-		<pre><code>:root {
-  --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-family: var(--font-family-sans);
-  --color-background: white;
-  --color-foreground-muted: #f9fafb;
-  --color-foreground: #f3f4f6;
-  --color-foreground-accent: #d1d5db;
-  --color-text-muted: #6b7280;
-  --color-text-base: #1f2937;
-  --color-text-emphasis: #111827;
-  --text-size-xs: 11px;
-  --text-size-sm: 13px;
-  --text-size-md: 16px;
-  --text-size-lg: 19px;
-  --text-size-xl: 23px;
-  --text-size-2xl: 27px;
-  --text-size-3xl: 31px;
-  --text-decoration: underline;
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-2xl: 6rem;
-  --breakpoint-2xs: 264px;
-  --breakpoint-xs: 480px;
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-  --border-radius: 5px;
-}</code></pre>
+		<section>
+			<hgroup>
+				<p>Jul 4th 2023</p>
+				<h1>Example Heading group</h1>
+			</hgroup>
+			<p>This is a paragraph. <a href="#">This is a link</a> in the paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<blockquote><p>This is a <code>&lt;blockquote&gt;</code>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></blockquote>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<h2>Example h2</h2>
+			<h3>Example h3</h3>
+			<p><a href="#">This is a link</a>.</p>
+			<p><small>This is a <code>&lt;small&gt;</code> tag.</small></p>
+			<p>This is a <sup>sup</sup> tag.</p>
+			<p>This is an <code>&lt;a&gt;</code> with <code>type="button"</code>: <a href="#" type="button">Click me</a></p>
+			<aside>
+				<h3>Example aside</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</aside>
+			<figure>
+				<div style="border: 3px dashed var(--color-foreground-accent); border-radius: var(--border-radius); width: 100%; height: 10rem;"></div>
+				<figcaption>This is a figure containing img and figcaption.</figcaption>
+			</figure>
+			<form method="GET" action="/" max-width="2xs">
+				<h6>Example form</h6>
+				<div margin-bottom="md">
+					<label for="email">Email</label>
+					<input type="email" name="email" required />
+				</div>
+				<div margin-bottom="md">
+					<label for="color">Favorite color</label>
+					<select>
+						<option value="red">Red</option>
+						<option value="blue">Blue</option>
+						<option value="yellow">Yellow</option>
+					</select>
+				</div>
+				<button type="submit">Submit</button>
+				<p>with [aria-busy] attribute:</p>
+				<button type="submit" aria-busy>Submit</button>
+			</form>
+		</section>
+		<section>
+			<h1>Variables</h1>
+			<pre><code>:root {
+	  --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	  --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+	  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	  --font-family: var(--font-family-sans);
+	  --color-background: white;
+	  --color-foreground-muted: #f9fafb;
+	  --color-foreground: #f3f4f6;
+	  --color-foreground-accent: #d1d5db;
+	  --color-text-muted: #6b7280;
+	  --color-text-base: #1f2937;
+	  --color-text-emphasis: #111827;
+	  --text-size-xs: 11px;
+	  --text-size-sm: 13px;
+	  --text-size-md: 16px;
+	  --text-size-lg: 19px;
+	  --text-size-xl: 23px;
+	  --text-size-2xl: 27px;
+	  --text-size-3xl: 31px;
+	  --text-decoration: underline;
+	  --space-xs: 0.25rem;
+	  --space-sm: 0.5rem;
+	  --space-md: 1rem;
+	  --space-lg: 2rem;
+	  --space-xl: 3rem;
+	  --space-2xl: 6rem;
+	  --breakpoint-2xs: 264px;
+	  --breakpoint-xs: 480px;
+	  --breakpoint-sm: 640px;
+	  --breakpoint-md: 768px;
+	  --breakpoint-lg: 1024px;
+	  --breakpoint-xl: 1280px;
+	  --breakpoint-2xl: 1536px;
+	  --border-radius: 5px;
+	}</code></pre>
+		</section>
   </body>
 </html>
