@@ -11,7 +11,6 @@
   --color-text-base: #111827;
   --color-text-emphasis: #030712;
   --color-text-highlight: #eff6ff;
-  --color-text-highlight-emphasis: #dbeafe;
   --text-size-xs: 80%;
   --text-size-sm: 90%;
   --text-size-md: 100%;
@@ -45,7 +44,6 @@ mdedia (prefers-color-scheme: dark) {
     --color-text-base: #f4f4f5;
     --color-text-emphasis: #fafafa;
     --color-text-highlight: #172554;
-    --color-text-highlight-emphasis: #1e3a8a;
   }  
 }
 
@@ -174,24 +172,29 @@ hr {
   background-color: var(--color-foreground-accent);
 }
 
-a, [type="link"] {
+a {
   background-color: transparent;
   border-radius: var(--border-radius);
   color: var(--color-text-emphasis);
   margin: -.1em -.2em;
   padding: .1em .2em;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: .0625em;
   transition: background-color .2s ease;
 }
 
-p a, p [type="link"], ul a, ul [type="link"], ol a, ol [type="link"] {
-  background-color: var(--color-text-highlight);
+a:active {
+  text-decoration: underline;
 }
 
 @media (hover: hover) {
-  a:hover, [type="link"]:hover {
-    background-color: var(--color-text-highlight-emphasis);
+  a:hover {
+    text-decoration: underline;
   }
+}
+
+a:visited {
+  color: var(--color-text-base);
 }
 
 ul, ol {
@@ -593,7 +596,6 @@ button[aria-busy]::before, [type="button"][aria-busy]::before {
 [text-color="muted"] { color: var(--color-text-muted); }
 [text-color="base"] { color: var(--color-text-base); }
 [text-color="emphasis"] { color: var(--color-text-emphasis); }
-[text-color="accent"] { color: var(--color-accent); }
 [text-weight="100"] { font-weight: 100; }
 [text-weight="200"] { font-weight: 200; }
 [text-weight="300"] { font-weight: 300; }
@@ -603,6 +605,7 @@ button[aria-busy]::before, [type="button"][aria-busy]::before {
 [text-weight="700"] { font-weight: 700; }
 [text-weight="800"] { font-weight: 800; }
 [text-weight="900"] { font-weight: 900; }
+[text-decoration="none"] { text-decoration: none; }
 [text-transform="uppercase"] { text-transform: uppercase; }
 [text-transform="lowercase"] { text-transform: lowercase; }
 
