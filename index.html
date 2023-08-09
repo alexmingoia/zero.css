@@ -2,16 +2,19 @@
 <html>
 <html lang="en">
 	<head>
-		<title>ZeroCSS – Styled HTML without CSS</title>
+		<title>ZeroCSS: Classy style without classes.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" href="/zero.css" />
 	</head>
-	<body container padding-vertical="xl" padding-horizontal="lg">
-		<hgroup text-align="center">
-	    <h1><em>ZeroCSS</em></h1>
-			<p>Classy style without classes.</p>
-		</hgroup>
-		<pre><code>&lt;link href="https://cdn.jsdelivr.net/gh/alexmingoia/zero.css@2023-07-09/zero.min.css" type="text/css" rel="stylesheet" /&gt;</code></pre>
+	<body>
+		<section>
+			<hgroup text-align="center">
+		    <h1><em>ZeroCSS</em></h1>
+				<p>Classy style without classes.</p>
+			</hgroup>
+			<pre><code>&lt;link href="https://cdn.jsdelivr.net/gh/alexmingoia/zero.css@2023-07-09/zero.min.css" type="text/css" rel="stylesheet" /&gt;</code></pre>
+			<p text-size="1">ZeroCSS elegantly styles HTML – no classes or extra markup required. Designed according to typographic best practices and accessibility standards. Font sizing and spacing are fluidly responsive based on <a href="https://utopia.fyi/">clamp scales</a>. Dark and light palettes are included and used according to browser preference.</p>
+		</section>
 		<section>
 			<hgroup>
 				<p>Jul 4th 2023</p>
@@ -26,6 +29,16 @@
 			<p><small>This is a <code>&lt;small&gt;</code> tag.</small></p>
 			<p>This is a <sup>sup</sup> tag.</p>
 			<p>This is an <code>&lt;a&gt;</code> with <code>type="button"</code>: <a href="#" type="button">Click me</a></p>
+			<ul>
+				<li>List item A</li>
+				<li>List item B</li>
+				<li>List item C</li>
+			</ul>
+			<ol>
+				<li>List item A</li>
+				<li>List item B</li>
+				<li>List item C</li>
+			</ol>
 			<aside>
 				<h3>Example aside</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -34,6 +47,7 @@
 				<div style="border: 3px dashed var(--color-foreground-accent); border-radius: var(--border-radius); width: 100%; height: 10rem;"></div>
 				<figcaption>This is a figure containing img and figcaption.</figcaption>
 			</figure>
+			<hr>
 			<form method="GET" action="/" max-width="2xs">
 				<h6>Example form</h6>
 				<div margin-bottom="md">
@@ -48,48 +62,9 @@
 						<option value="yellow">Yellow</option>
 					</select>
 				</div>
-				<button type="submit">Submit</button>
-				<p>with [aria-busy] attribute:</p>
-				<button type="submit" aria-busy>Submit</button>
+				<button type="submit">Submit</button> <button type="submit" aria-busy>Submit</button>
+				<p margin-top="2xs"><small>[aria-busy] attribute displays loading indicator</small></p>
 			</form>
-		</section>
-		<section>
-			<h1>Variables</h1>
-			<pre><code>:root {
-	  --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	  --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-	  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-	  --font-family: var(--font-family-sans);
-	  --color-background: white;
-	  --color-foreground-muted: #f9fafb;
-	  --color-foreground: #f3f4f6;
-	  --color-foreground-accent: #d1d5db;
-	  --color-text-muted: #6b7280;
-	  --color-text-base: #1f2937;
-	  --color-text-emphasis: #111827;
-	  --text-size-xs: 11px;
-	  --text-size-sm: 13px;
-	  --text-size-md: 16px;
-	  --text-size-lg: 19px;
-	  --text-size-xl: 23px;
-	  --text-size-2xl: 27px;
-	  --text-size-3xl: 31px;
-	  --text-decoration: underline;
-	  --space-xs: 0.25rem;
-	  --space-sm: 0.5rem;
-	  --space-md: 1rem;
-	  --space-lg: 2rem;
-	  --space-xl: 3rem;
-	  --space-2xl: 6rem;
-	  --breakpoint-2xs: 264px;
-	  --breakpoint-xs: 480px;
-	  --breakpoint-sm: 640px;
-	  --breakpoint-md: 768px;
-	  --breakpoint-lg: 1024px;
-	  --breakpoint-xl: 1280px;
-	  --breakpoint-2xl: 1536px;
-	  --border-radius: 5px;
-	}</code></pre>
 		</section>
   </body>
 </html>
